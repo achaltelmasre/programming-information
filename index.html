@@ -4,8 +4,9 @@
   
     <title>Programming Information</title>
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <style>
-        body{
+        body {
             background-color: #d2d3f0;
         }
         .container{
@@ -51,7 +52,7 @@
             text-align: center;
         }
         h1{
-            color: rgb(24, 24, 111);
+            gcolor: rgb(24, 24, 111);
             font-size: 50px;
         }
         .text1:hover{
@@ -65,14 +66,27 @@
         }
         .btn:hover{
             font-size: 21px;
-            background-color: rgb(60, 119, 30);
+            background-color: rgb(60, 119, 30);  
+        }
+        .dark{
+            background-color: black;
+         
+
+        }
+        .light{
+            background-color: #767ad6;
             
+        }
+        .heading{
+            color: white;
         }
     </style>
 </head>
-<body >
-    
-  <center><h1>INFORMATION &nbsp; ABOUT&nbsp;  PROGRAMMING &nbsp; LANGUAGES</h1></center>
+<body id="change" >
+    <button type="button" class="fw-2 m-3 fw-bold" onclick="changeTheme('dark')" >Dark Mode</button>
+    <button type="button" class="fw-2 m-3 fw-bold " onclick="changeTheme('light')" >Light Mode</button>
+
+  <center><h1 class="text-warning">INFORMATION &nbsp; ABOUT&nbsp;  PROGRAMMING &nbsp; LANGUAGES</h1></center>
   <br><br>
   <img  class=" img2"src="https://cdn.educba.com/academy/wp-content/uploads/2019/10/Best-Programming-Languages.png">
   <br><br>
@@ -152,6 +166,19 @@
     </div>
 
   </div>
+
+  
+     <script>
+        const light=document.getElementById('change')
+        const head=document.getElementById('heading')
+        function  changeTheme(bg)
+        {
+            light.className=`${bg}`
+        }
+    
+      
+    </script>
+
     
 </body>
 </html>
